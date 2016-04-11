@@ -43,12 +43,21 @@ body {
 main {
     height: 100%;
     margin-top: -2%;
-    align-items: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .face {
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
     border-radius: 50%;
     width: 300px;
     height: 300px;
@@ -104,8 +113,12 @@ a {
 @media (max-width: 800px) {
     main {
         margin-top: 2ch;
-        flex-direction: column;
-        justify-content: flex-start;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-justify-content: flex-start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
     }
 
     .content {
